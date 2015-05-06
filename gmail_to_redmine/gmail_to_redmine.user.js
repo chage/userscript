@@ -4,7 +4,7 @@
 // @description    GMail to Redmine
 // @author         chage
 // @match          https://mail.google.com/mail/*
-// @version        0.1.3
+// @version        0.1.4
 // @downloadURL    https://github.com/chage/userscript/raw/master/gmail_to_redmine/gmail_to_redmine.user.js
 // @updateURL      https://github.com/chage/userscript/raw/master/gmail_to_redmine/gmail_to_redmine.meta.js
 // @require        https://code.jquery.com/jquery-1.11.1.min.js
@@ -77,9 +77,9 @@ function showAPIKeyDialog() {
 	var project_id = GM_getValue('redmine_project_id') || '';
 	// input layout
 	var chageInputHTML = '<span style="float: right; border: 1px solid #336699; color: red; font-weight: bold;" class="chage_close">X</span>';
-	chageInputHTML += 'Site URL: <input type="text" class="chage_input_url" style="border: 1px solid #336699; width: 100px;" value="' + url + '"><br/>';
+	chageInputHTML += 'Site URL: <input type="text" class="chage_input_url" style="border: 1px solid #336699; width: 100px;" placeholder="http://www.redmine.org" value="' + url + '"><br/>';
 	chageInputHTML += 'API KEY: <input type="text" class="chage_input_apiKey" style="border: 1px solid #336699; width: 100px;" value="' + apiKey + '"><br/>';
-	chageInputHTML += 'Project ID: <input type="text" class="chage_input_project_id" style="border: 1px solid #336699; width: 100px;" value="' + project_id + '"><br/>';
+	chageInputHTML += 'Project ID: <input type="text" class="chage_input_project_id" style="border: 1px solid #336699; width: 100px;" placeholder="redmine" value="' + project_id + '"><br/>';
 	chageInputHTML += '<input type="button" value="SAVE">';
 	var chageInput = chage('<div>').attr('class', 'chage_input').css({
 		'opacity': 0.9,
