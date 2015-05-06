@@ -77,7 +77,7 @@ function showAPIKeyDialog() {
 	var project_id = GM_getValue('redmine_project_id') || '';
 	// input layout
 	var chageInputHTML = '<span style="float: right; border: 1px solid #336699; color: red; font-weight: bold;" class="chage_close">X</span>';
-	chageInputHTML += 'Site URL: <input type="text" class="chage_input_url" style="border: 1px solid #336699; width: 100px;" placeholder="http://www.redmine.org" value="' + url + '"><br/>';
+	chageInputHTML += 'Site URL: <input type="text" class="chage_input_url" style="border: 1px solid #336699; width: 100px;" placeholder="https://www.redmine.org" value="' + url + '"><br/>';
 	chageInputHTML += 'API KEY: <input type="text" class="chage_input_apiKey" style="border: 1px solid #336699; width: 100px;" value="' + apiKey + '"><br/>';
 	chageInputHTML += 'Project ID: <input type="text" class="chage_input_project_id" style="border: 1px solid #336699; width: 100px;" placeholder="redmine" value="' + project_id + '"><br/>';
 	chageInputHTML += '<input type="button" value="SAVE">';
