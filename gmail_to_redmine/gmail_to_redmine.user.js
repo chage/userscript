@@ -4,7 +4,7 @@
 // @description    GMail to Redmine
 // @author         chage
 // @match          https://mail.google.com/mail/*
-// @version        0.1.4
+// @version        0.1.5
 // @downloadURL    https://github.com/chage/userscript/raw/master/gmail_to_redmine/gmail_to_redmine.user.js
 // @updateURL      https://github.com/chage/userscript/raw/master/gmail_to_redmine/gmail_to_redmine.meta.js
 // @require        https://code.jquery.com/jquery-1.11.1.min.js
@@ -38,7 +38,7 @@ chage(document).on('click', '.chage', function() {
 		}
 		var data = {
 			subject: chage(document).find('.nH .ha .hP').text(),
-			description: t.find('.a3s').text(),
+			description: (t.find('.a3s').prop('textContent') || t.find('.a3s').prop('innerText'))
 			start_date: start_date
 		}
 		data.project_id = GM_getValue('redmine_project_id');
